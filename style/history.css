@@ -1,0 +1,38 @@
+a{text-decoration:none}
+@font-face {
+    font-family: "阿里妈妈数黑体 Bold";
+    font-weight: 700;
+    src: url("../font/Alimama_ShuHeiTi_Bold.woff2") format("woff2"),
+    url("../font/Alimama_ShuHeiTi_Bold.woff") format("woff");
+    font-display: swap;
+}
+div{
+    font-family:"阿里妈妈数黑体 Bold" ;
+}
+body {
+    background-color: white;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: burlywood;
+    height: 1400px;
+    width: 1400px;
+}
+main #chs{
+    display: flex;
+    width: 96%;
+    height: 8%;
+    margin-top: 2%;
+    margin-left: 2%;
+    background-color: white;
+}
+main #chs .dch{
+    display: flex;
+    width: 20%;
+    height: 54%;
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color:aqua;
+}
