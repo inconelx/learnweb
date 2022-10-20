@@ -1,4 +1,7 @@
-a{text-decoration:none}
+a{
+    text-decoration:none;
+    font-size:xx-large;
+}
 @font-face {
     font-family: "阿里妈妈数黑体 Bold";
     font-weight: 700;
@@ -17,7 +20,7 @@ main {
     flex-direction: column;
     margin: auto;
     background-color: burlywood;
-    height: 1400px;
+    height: auto;
     width: 1400px;
 }
 main #chs{
@@ -25,6 +28,7 @@ main #chs{
     width: 96%;
     height: 8%;
     margin-top: 2%;
+    margin-bottom: 2%;
     margin-left: 2%;
     background-color: white;
 }
@@ -33,6 +37,54 @@ main #chs .dch{
     width: 20%;
     height: 54%;
     margin-top: 2%;
+    margin-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     margin-left: 4%;
     background-color:aqua;
+}
+main #intro{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:aqua;
+}
+img{
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+main #chs .dch:hover{background-color: skyblue;}
+@media (max-width: 992px) {
+    main {
+        width: 100%;
+        height: auto;
+    }
+    main #chs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: auto;
+    }
+    main #chs .dch{
+        display: flex;
+        width: 70%;
+        margin:auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        height: auto;
+    }
+    img{
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
