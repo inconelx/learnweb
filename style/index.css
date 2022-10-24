@@ -135,6 +135,7 @@ main #grds .elems .e_w{
         margin: auto;
     }
     main #grds{
+        overflow-x: scroll;
         height: auto;
         margin-bottom: 2%;
     }
