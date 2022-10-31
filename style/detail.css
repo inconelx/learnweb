@@ -52,14 +52,15 @@ main #intro{
     background-color: white;
 }
 main #intro #image{
-    width: 32%;
+    width: 30%;
     height: 52%;
     margin-top: 2%;
     margin-left: 2%;
+    margin-right: 2%;
     background-color: white;
 }
 main #intro #image img{
-    width: auto;height: 100%;border: #111111 1px solid;
+    width: 100%;height: auto;
 }
 main #intro #info{
     width: 64%;
@@ -84,6 +85,7 @@ main #intro #brief{
     margin-left: 34%;
     background-color:aqua;
     padding: 2%;
+    overflow-y: scroll;
 }
 @media (max-width: 992px) {
     main {
