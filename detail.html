@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>测试页面1</title>
     <meta name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,  maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="jq/css/style.css">
   </head>
   <body>
     <header>
@@ -30,7 +31,20 @@
     </div>
       <div id="intro">
         <div id="image">
-          <img src="image/1.png">
+          <div id="slider">
+            <ul class="slides clearfix">
+              <li><img class="responsive" src="image/1_0.png"></li>
+              <li><img class="responsive" src="image/1_1.png"></li>
+            </ul>
+            <ul class="controls">
+              <li><img src="jq/img/prev.png" alt="previous"></li>
+              <li><img src="jq/img/next.png" alt="next"></li>
+            </ul>
+            <ul class="pagination">
+              <li class="active"></li>
+              <li></li>
+            </ul>
+          </div>
         </div>
         <div id="info">
           <div class="pros"><div style="margin:auto">符号:</div><div id="info_0" style="margin:auto">H</div></div>
@@ -57,6 +71,20 @@
 
       
     </main>
-
+    <script>window.jQuery || document.write('<script src="jq/js/jquery-2.1.1.min.js"><\/script>')</script>
+    <script src="jq/dist/easySlider.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#slider").easySlider( {
+          slideSpeed: 500,
+          paginationSpacing: "15px",
+          paginationDiameter: "12px",
+          paginationPositionFromBottom: "20px",
+          slidesClass: ".slides",
+          controlsClass: ".controls",
+          paginationClass: ".pagination"					
+        });
+      });
+    </script>
   </body>
 </html>
