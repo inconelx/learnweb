@@ -1,5 +1,5 @@
 window.onload = () =>{
-    $.get("/template/header.tpl", (r) => {
+    $.get("/learnweb/header.tpl", (r) => {
         $("header").html(r);
     })
 }
