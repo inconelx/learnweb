@@ -1,0 +1,39 @@
+#chs{
+    display: flex;
+    width: 96%;
+    height: 8%;
+    margin-top: 2%;
+    margin-left: 2%;
+    background-color: white;
+}
+#chs .dch{
+    display: flex;
+    width: 20%;
+    height: 54%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 4%;
+    background-color:aqua;
+}
+#chs .dch:hover{background-color: skyblue;}
+@media (max-width: 992px){
+    #chs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: auto;
+    }
+    #chs .dch{
+        display: flex;
+        width: 70%;
+        margin:auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        height: auto;
+    }
+    #chs .dch:hover{background-color: skyblue;}
+}

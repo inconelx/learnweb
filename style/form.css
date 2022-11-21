@@ -1,4 +1,4 @@
-@import url("style/normalize.css");
+@import url("/style/normalize.css");
 a{
     text-decoration:none;
     font-size:xx-large;
@@ -32,26 +32,6 @@ main {
     height: auto;
     width: 1400px;
 }
-main #chs{
-    display: flex;
-    width: 96%;
-    height: 8%;
-    margin-top: 2%;
-    margin-left: 2%;
-    background-color: white;
-}
-main #chs .dch{
-    display: flex;
-    width: 20%;
-    height: 54%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-left: 4%;
-    background-color:aqua;
-}
-main #chs .dch:hover{background-color: skyblue;}
 form {
     margin: 2%;
     background-color: white;
