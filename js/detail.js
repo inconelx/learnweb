@@ -37,7 +37,7 @@ var post3 = {
     '由于电极电势最负，锂是已知元素（包括放射性元素）中金属活动性最强的。'
     ]};
 
-$.get("/template/detail_info.tpl", function(result){
+$.get("/learnweb/template/detail_info.tpl", function(result){
     var cookies = document.cookie.split(";");
     let i = 0
     for(; i < cookies.length; ++i){
