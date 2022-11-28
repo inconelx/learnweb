@@ -11,8 +11,9 @@
             <li><img src="jq/img/next.png" alt="next"></li>
         </ul>
         <ul class="pagination">
-            <li class="active"></li>
-            <li></li>
+            <% dcs.forEach(function(dc){ %>
+                <li class="<%= dc %>"></li>
+            <% }) %>
         </ul>
         </div>
     </div>
