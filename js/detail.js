@@ -1,4 +1,5 @@
 var post = { imgs:['image/1_0.png','image/1_1.png'],
+dcs:['active','',''],
 info_0:'H',info_1:'氢',info_2:'1.008',
 info_3:'-259℃',info_4:'-253℃',info_5:'非金属',info_6:'1',
 info_7:'ⅠA',info_8_0:'1s',info_8_1:'1',info_8_2:'',
