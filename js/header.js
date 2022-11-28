@@ -1,3 +1,3 @@
-$.get("/template/header.tpl", (r) => {
+$.get("../template/header.tpl", (r) => {
     $("header").html(r);
 })
