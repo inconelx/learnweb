@@ -17,8 +17,8 @@ function login(){
             for(; i < passwords.length; ++i){
                 if(usernumbers[i] == usernumber.value){
                     if(passwords[i] == password.value){
-                        document.cookie = "1";
-                        window.location.replace('form.html');
+                        document.cookie = "islogin=1";
+                        window.location = "form.html";
                     }
                     else{
                         window.alert("密码错误");
@@ -32,9 +32,19 @@ function login(){
         }
     }
 }
-
-if(document.cookie == "1"){
-    window.location = "form.html";
-}else{
+var cookies = document.cookie.split(";");
+let i = 0
+for(; i < cookies.length; ++i){
+    var dc = cookies[i].split("=");
+    if(dc[0]=="islogin"){
+        if(dc[1]=="1"){
+            window.location = "form.html";
+        }else{
+            login();
+        }
+        break;
+    }
+}
+if(i == cookies.length){
     login();
 }
