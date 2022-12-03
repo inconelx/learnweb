@@ -12,7 +12,12 @@
   <body>
     <header></header>
     <main>
-        <form>
+        <form id="my_search" style="margin-bottom: 0%;padding: 0%;background-color: burlywood;">
+          序号(核电荷数):<input type="number" name="search_number" style="width: 60px;">
+          <button type="button" style="margin-top:1%;margin-bottom:1%;">查找</button>
+          <button type="button" style="margin-top:1%;margin-bottom:1%;">删除</button>
+        </form>
+        <form id="details">
           <fieldset id="baseinfo">
             <legend>基本属性</legend>
             <fieldset>
@@ -45,64 +50,64 @@
           <fieldset>
             <legend>周期:</legend>
             <select name="periodic">
-              <option value="p1">1</option>
-              <option value="p2">2</option>
-              <option value="p3">3</option>
-              <option value="p4">4</option>
-              <option value="p5">5</option>
-              <option value="p6">6</option>
-              <option value="p7">7</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
             </select>
           </fieldset>
           <fieldset>
             <legend>族:</legend>
             <select name="clan">
-              <option value="a0">0</option>
-              <option value="a1">ⅠA</option>
-              <option value="a2">ⅡA</option>
-              <option value="a3">ⅢA</option>
-              <option value="a4">ⅣA</option>
-              <option value="a5">ⅤA</option>
-              <option value="a6">ⅥA</option>
-              <option value="a7">ⅦA</option>
-              <option value="b1">ⅠB</option>
-              <option value="b2">ⅡB</option>
-              <option value="b3">ⅢB</option>
-              <option value="b4">ⅣB</option>
-              <option value="b5">ⅤB</option>
-              <option value="b6">ⅥB</option>
-              <option value="b7">ⅦB</option>
-              <option value="b8">ⅧB</option>
+              <option value="0">0</option>
+              <option value="ⅠA">ⅠA</option>
+              <option value="ⅡA">ⅡA</option>
+              <option value="ⅢA">ⅢA</option>
+              <option value="ⅣA">ⅣA</option>
+              <option value="ⅤA">ⅤA</option>
+              <option value="ⅥA">ⅥA</option>
+              <option value="ⅦA">ⅦA</option>
+              <option value="ⅠB">ⅠB</option>
+              <option value="ⅡB">ⅡB</option>
+              <option value="ⅢB">ⅢB</option>
+              <option value="ⅣB">ⅣB</option>
+              <option value="ⅤB">ⅤB</option>
+              <option value="ⅥB">ⅥB</option>
+              <option value="ⅦB">ⅦB</option>
+              <option value="ⅧB">ⅧB</option>
             </select>
           </fieldset>
           <fieldset>
             <legend>分类:</legend>
             <select name="classification">
-              <option value="a1">碱金属</option>
-              <option value="a2">碱土金属</option>
-              <option value="b">过渡金属</option>
-              <option value="la">镧系元素</option>
-              <option value="ar">锕系元素</option>
-              <option value="metal">主族金属</option>
-              <option value="semimetal">半金属</option>
-              <option value="nonmetal">非金属</option>
-              <option value="a7">卤素</option>
-              <option value="0">稀有气体</option>
-              <option value="unknow">未知</option>
+              <option value="碱金属">碱金属</option>
+              <option value="碱土金属">碱土金属</option>
+              <option value="过渡金属">过渡金属</option>
+              <option value="镧系元素">镧系元素</option>
+              <option value="锕系元素">锕系元素</option>
+              <option value="主族金属">主族金属</option>
+              <option value="半金属">半金属</option>
+              <option value="非金属">非金属</option>
+              <option value="卤素">卤素</option>
+              <option value="稀有气体">稀有气体</option>
+              <option value="未知">未知</option>
           </select>
           </fieldset>
           <fieldset>
             <legend>是否有稳定同位素：</legend>
-            <input type="radio" name="a1" value="y_">是
-            <input type="radio" name="a1" value="n_">否
+            <input type="radio" name="a1" value="y">是
+            <input type="radio" name="a1" value="n">否
           </fieldset>
           <fieldset>
             <legend>价电子:</legend>
-              <input type="checkbox" name="boxs" value="f_e">&nbsp;f&nbsp;
+              <input type="checkbox" name="boxs" value="f">&nbsp;f&nbsp;
               <input type="number" name="f_e_number" style="width: 30px;">
-              <input type="checkbox" name="boxs" value="d_e">&nbsp;d&nbsp;
+              <input type="checkbox" name="boxs" value="d">&nbsp;d&nbsp;
               <input type="number" name="d_e_number" style="width: 30px;">
-              <input type="checkbox" name="boxs" value="s_e">&nbsp;s&nbsp;
+              <input type="checkbox" name="boxs" value="s">&nbsp;s&nbsp;
               <input type="number" name="s_e_number" style="width: 30px;">
           </fieldset>
           </fieldset>
@@ -115,7 +120,7 @@
             <button type="button" style="margin-top:1%;margin-bottom:1%;height:40px">新增图片</button>
             <div id="upimgs"></div>
           </fieldset>
-          <button type="submit" style="margin-top:1%;margin-bottom:1%;height:40px">提交</button>
+          <button type="button" style="margin-top:1%;margin-bottom:1%;height:40px" id="submitbutton">提交</button>
         </form>
       </div>
     </main>
