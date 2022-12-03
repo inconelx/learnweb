@@ -31,6 +31,7 @@ main {
     background-color: burlywood;
     height: auto;
     width: 1400px;
+    font-family:"阿里妈妈数黑体 Bold" ;
 }
 form {
     margin: 2%;
@@ -66,7 +67,7 @@ textarea{
         width: 100%;
         height: auto;
     }
-    main #chs{
+    /*main #chs{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -81,7 +82,7 @@ textarea{
         padding-top: 2%;
         padding-bottom: 2%;
         height: auto;
-    }
+    }*/
     form {
         margin-bottom: 2%;
         height: auto;
