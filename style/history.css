@@ -18,13 +18,14 @@ body {
 }
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: auto;
     background-color: burlywood;
     height: auto;
     width: 1400px;
+
 }
-main #chs{
+/*main #chs{
     display: flex;
     width: 96%;
     height: 8%;
@@ -43,7 +44,7 @@ main #chs .dch{
     padding-bottom: 1%;
     margin-left: 4%;
     background-color:aqua;
-}
+}*/
 main #intro{
     display: flex;
     flex-direction: column;
@@ -55,19 +56,49 @@ main #intro{
     margin-top: 2%;
     margin-bottom: 2%;
     background-color:aqua;
+    padding-bottom: 2%;
 }
 img{
     width:40%;
     margin-left: auto;
     margin-right: auto;
 }
-main #chs .dch:hover{background-color: skyblue;}
+#click_btn{
+    width: 5%;
+    padding-right: 5%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #click_btn a{
+    display: block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    line-height: 100%;
+    text-align: center;
+    float: left;
+    margin-top :10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    /*margin-right: 15px;
+    padding: 0px 15px;*/
+  }
+
+  #click_btn a:hover{
+    background: #666;
+  }
 @media (max-width: 992px) {
     main {
         width: 100%;
         height: auto;
+        flex-direction: column;
     }
-    main #chs{
+    /*main #chs{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -82,10 +113,22 @@ main #chs .dch:hover{background-color: skyblue;}
         padding-top: 2%;
         padding-bottom: 2%;
         height: auto;
-    }
+    }*/
     img{
         width:100%;
         margin-left: auto;
         margin-right: auto;
+    }
+    #click_btn{
+        flex-direction: row;
+        margin-left: 5%;
+        margin-bottom :5%;
+    }
+    #click_btn a{
+        float: left;
+        margin-right: 100%;
+        padding: 50%;
+        /*margin-right: 15px;
+        padding: 0px 15px;*/
     }
 }
