@@ -17,7 +17,7 @@ function login(){
             for(; i < passwords.length; ++i){
                 if(usernumbers[i] == usernumber.value){
                     if(passwords[i] == password.value){
-                        document.cookie = "islogin=1";
+                        document.cookie = 'islogin=1';
                         window.location = "form.html";
                     }
                     else{
@@ -33,10 +33,13 @@ function login(){
     }
 }
 var cookies = document.cookie.split(";");
-let i = 0
+let i = 0;
+console.log(cookies.length);
 for(; i < cookies.length; ++i){
     var dc = cookies[i].split("=");
-    if(dc[0]=="islogin"){
+    console.log(dc);
+    if(dc[0]=='islogin' || dc[0]==' islogin'){
+        console.log(dc[1]);
         if(dc[1]=="1"){
             window.location = "form.html";
         }else{
