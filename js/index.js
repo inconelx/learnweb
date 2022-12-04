@@ -98,10 +98,10 @@ function index_select(){
                 e_cn[0].style.color = "black";
                 e_w[0].style.color = "black";
             }
-            if(dc.rainfo == '1'){
-                obj[j].style.borderColor = "red";
-            }else{
+            if(dc.rainfo == '0'){
                 obj[j].style.borderColor = "black";
+            }else{
+                obj[j].style.borderColor = "red";
             }
             obj[j].onclick = () =>{
                 let m = "select=" + (j+1);
