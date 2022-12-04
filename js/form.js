@@ -75,6 +75,17 @@ function mysearch(){
     let button = search_obj.querySelectorAll("button");
     button[0].onclick = () =>{
         var mynumber = search_obj.querySelector("input").value;
+        var special_count = mynumber;
+        if(special_count > 57 && special_count < 72){
+            special_count += 33;
+        }else if(special_count > 71 && special_count < 90){
+            special_count -= 14;
+        }else if(special_count > 89 && special_count < 104){
+            special_count += 15;
+        }else if(special_count > 103){
+            special_count -= 28;
+        }
+        mynumber = special_count;
         var dc = localStorage.getItem("post"+mynumber);
         if(dc == null){
             window.alert("不存在");
@@ -202,6 +213,17 @@ function mysearch(){
     }
     button[1].onclick = () =>{
         var mynumber = search_obj.querySelector("input").value;
+        var special_count = mynumber;
+        if(special_count > 57 && special_count < 72){
+            special_count += 33;
+        }else if(special_count > 71 && special_count < 90){
+            special_count -= 14;
+        }else if(special_count > 89 && special_count < 104){
+            special_count += 15;
+        }else if(special_count > 103){
+            special_count -= 28;
+        }
+        mynumber = special_count;
         if(localStorage.getItem("post" + mynumber) == null){
             window.alert("不存在");
         }else{
