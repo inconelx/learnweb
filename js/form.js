@@ -206,7 +206,11 @@ function mysearch(){
             window.alert("不存在");
         }else{
             localStorage.removeItem("post" + mynumber);
-            window.alert("删除成功");
+            if(mynumber == 1 ||mynumber == 2||mynumber == 3){
+                window.alert("删除成功,该内容将在返回首页后刷新");
+            }else{
+                window.alert("删除成功");
+            }
         }
     }
 }
@@ -214,7 +218,7 @@ function the_submit(){
     let button = document.getElementById("submitbutton");
     button.onclick = () => {
         if(document.getElementsByName("number")[0].value < 1 || document.getElementsByName("number")[0].value > 118){
-            window.alert("数据有误");
+            window.alert("序号超出范围");
         }else{
             var post = {};
             post.info_0 = document.getElementsByName("symbol")[0].value;
@@ -225,10 +229,10 @@ function the_submit(){
             post.info_5 = document.getElementsByName("classification")[0].value;
             post.info_6 = document.getElementsByName("periodic")[0].value;
             post.info_7 = document.getElementsByName("clan")[0].value;
-            if(document.getElementsByName("a1")[0].checked){
-                post.rainfo = '0';
-            }else{
+            if(document.getElementsByName("a1")[1].checked){
                 post.rainfo = '1';
+            }else{
+                post.rainfo = '0';
             }
             let count = 0;
             for(let i = 0; i < 6; i++){
@@ -262,8 +266,29 @@ function the_submit(){
             post.briefs = briefs;
             post.imgs = imgs;
             post.dcs = dcs;
-            localStorage.setItem("post"+document.getElementsByName("number")[0].value, JSON.stringify(post));
-            console.log(post);
+            if(parseInt(post.info_3) > parseInt(post.info_4)){
+                window.alert("熔点不能高于沸点");
+            }else if(post.info_0.length > 3 || post.info_1.length > 1){
+                window.alert("输入名称过长");
+            }else if(post.info_0.length < 1 || post.info_1.length < 1){
+                window.alert("请输入名称");
+            }else if(post.info_2 == ''){
+                window.alert("请输入质量");
+            }else{
+                var special_count = parseInt(document.getElementsByName("number")[0].value);
+                if(special_count > 57 && special_count < 72){
+                    special_count += 33;
+                }else if(special_count > 71 && special_count < 90){
+                    special_count -= 14;
+                }else if(special_count > 89 && special_count < 104){
+                    special_count += 15;
+                }else if(special_count > 103){
+                    special_count -= 28;
+                }
+                console.log(special_count);
+                localStorage.setItem("post"+special_count, JSON.stringify(post));
+                window.alert("提交成功");
+            }
         }
         
     }
