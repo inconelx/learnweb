@@ -85,8 +85,7 @@ function mysearch(){
         }else if(special_count > 103){
             special_count -= 28;
         }
-        mynumber = special_count;
-        var dc = localStorage.getItem("post"+mynumber);
+        var dc = localStorage.getItem("post"+special_count);
         if(dc == null){
             window.alert("不存在");
         }else{
